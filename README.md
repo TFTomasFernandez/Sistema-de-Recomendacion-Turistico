@@ -1,11 +1,9 @@
-<div style="text-align: center;">
-<h1>Proyecto Final SoyHenry</h1>
-</div>
 
-<div style="text-align: center;">
-  <img src="img/data-forge-logo.jpg" alt="Data Forge - Crafting the Awesome">
+# Proyecto Final SoyHenry
+
+![Data Forge - Crafting the Awesome](img/data-forge-logo.jpg)
 Data Forge - Crafting the Awesome
-</div>
+
 
 ## Introducción
 *Dataforge esta conformado por un conjunto de profecionales que busca entender los patrones del pasado para comprender mejor las tendencias actuales y ayudar de la mejor manera a contruir el futuro.
