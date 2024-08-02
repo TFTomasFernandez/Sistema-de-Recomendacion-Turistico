@@ -24,11 +24,12 @@ Este proyecto está orientado a acompañar una pasión que muchos de nosotros co
 ## Productos a Desarrollar
 Este proyecto tiene como intención desarrollar tres productos:
 
-1. Un [Modelo de Recomendación](#modelo-de-recomendacion:-turismo-emergente), que busca identificar lugares con potencial poco explotado de turismo en determinados estados en relación a la región geográfica.
+1. Un [Modelo de Recomendación](#modelo-de-recomendacion:-turismo-emergente) que busca identificar lugares con potencial poco explotado de turismo en determinados estados en relación a la región geográfica.
 
-2. Una [Base de Datos](#base-de-datos:-turismo-de-interes), que es una base de datos creada a partir de las búsquedas llevadas a cabo en el sistema de recomendación con la intención de informar a posibles inversores de puntos de interés y/o tendencias de búsqueda.
+2. Una [Base de Datos](#base-de-datos:-turismo-de-interes) que es una base de datos creada a partir de las búsquedas llevadas a cabo en el sistema de recomendación con la intención de informar a posibles inversores de puntos de interés y/o tendencias de búsqueda.
 
-3. Un [Dashboard](#dashboard:-indicadores-turisticos).
+3. Un [Dashboard](#dashboard-indicadores-turisticos) con los indicadores principales a tratar e información relevante para el objetivo a alcanzar.
+
 A continuación observaremos en más detalle cada uno de estos productos:
 
 ### Modelo de Recomendación: Turismo Emergente
