@@ -22,6 +22,11 @@ Este proyecto está orientado a acompañar una pasión que muchos de nosotros co
 5. [Integrantes](#integrantes)
 
 ## Productos a Desarrollar
+
+<p style="text-align: center;">
+   <img src="img/dataflow.png" alt="Ciclo del Dato">
+</p>
+
 Este proyecto tiene como intención desarrollar tres productos:
 
 1. Un [Modelo de Recomendación](#modelo-de-recomendacion:-turismo-emergente) que busca identificar lugares con potencial poco explotado de turismo en determinados estados en relación a la región geográfica.
@@ -33,6 +38,11 @@ Este proyecto tiene como intención desarrollar tres productos:
 A continuación observaremos en más detalle cada uno de estos productos:
 
 ### Modelo de Recomendación: Turismo Emergente
+
+<p style="text-align: center;">
+   <img src="img/sistema-de-reco-pipeline.jpg" alt="Turismo Emergente">
+</p>
+
 El proyecto utiliza las bases de datos de [Yelp](https://www.yelp.com/) y [Google Maps](https://www.google.com/maps) otorgadas por el PO para formar un Sistema de Recomendación haciendo una Vectorización de Reseñas para extraer palabras clave de un grupo específico de estados de EE. UU. donde el turismo está disminuido o tiene propuestas de interés emergentes para sus posibles visitantes.
 
 Utilizamos, además, un conjunto de fuentes adicionales como el [Sitio de Viajes Oficial de EE. UU.](https://www.visittheusa.com/) o el [Sitio oficial de Administración de Viaje Internacional](https://www.trade.gov/) para hacer la selección de estados con potencial de crecimiento. [Más adelante](#foco-del-proyecto) haremos un análisis más profundo de los estados elegidos, acompañado del razonamiento utilizado.
@@ -43,15 +53,32 @@ El sistema de recomendación será consumido por el usuario en formato de págin
 - La búsqueda del área seleccionada en [Airbnb](https://www.airbnb.com).
 
 ### Base de Datos: Turismo de Interés
+
+<p style="text-align: center;">
+   <img src="img/modelo_entidad_relacion.png" alt="Modelo Relacional">
+</p>
+
 Una vez establecido el Sistema de Recomendación se creará una base de datos donde se almacenarán de manera sistemática las búsquedas realizadas por los usuarios en la web, dando insights sobre potenciales puntos de inversión y las tendencias de interés de los usuarios con la intención de informar las decisiones tomadas por potenciales inversores.
 
 La forma de consumo de dicha base de datos también será en formato web. Se le otorgará un usuario y contraseña al personal autorizado a acceder y, una vez ingresado, tendrán la posibilidad de observar y descargar los datos en crudo, almacenados en un servidor para su posterior procesamiento.
 
 ### Dashboard: Indicadores Turísticos
 
+<p style="text-align: center;">
+   <img src="img/mvp-dashboard3.jpg" alt="Dashboard 3">
+</p>
+
 Es importante que haya una correcta visualización de los datos para poder aprovechar los posibles puntos de inversión y desarrollo, estar al día con las últimas tendencias y, en definitiva, tener siempre en vista el objetivo.
 
+<p style="text-align: center;">
+   <img src="img/mvp-dashboard2.jpg" alt="Dashboard 2">
+</p>
+
 Para eso proponemos la creación de un Dashboard de los contenidos de la nueva base de datos procesada, con una clara visualización del progreso de los indicadores y otra información relevante al objetivo.
+
+<p style="text-align: center;">
+   <img src="img/mvp-dashboard1.jpg" alt="Dashboard 1">
+</p>
 
 ## Alcance del Proyecto
 Tras un análisis completo de los datos disponibles sumado a algunos datos externos que consideramos relevantes para el proyecto, nos definimos por dos estados iniciales. Cabe recalcar que si el proyecto resulta fructífero sería interesante aumentar este número. Los estados elegidos, acompañados con el razonamiento utilizado, son:
