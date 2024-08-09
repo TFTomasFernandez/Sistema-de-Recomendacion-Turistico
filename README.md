@@ -1,7 +1,7 @@
-# Proyecto Final SoyHenry
-<p style="text-align: center;">
-   <img src="img/data-forge-logo.jpg" alt="Data Forge - Forging the Future">
-</p>
+# <div align = "center" style="font-size:5rem"> Proyecto Final SoyHenry <div>
+<div align = "center" >
+   <img style="height:40rem;width:50rem" src="img/data-forge-logo.jpg" alt="Data Forge - Forging the Future">
+</div>
 <p style="text-align: center;">
    <em>Data Forge - Forging the Future</em>
 </p>
@@ -163,5 +163,4 @@ El proyecto requiere de múltiples sistemas funcionando en conjunto para garanti
     </td>
   </tr>
 </table>
-
 
