@@ -1,0 +1,306 @@
+body{
+    background-color: #ffffff;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.header{
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+.nav_items{
+    color: #fff;
+    margin: 0 5px;
+    text-decoration: none;
+}
+.nav_items:hover{
+    color: rgb(231, 142, 7);
+}
+  input {
+      /* color: blue; */
+      font-size: 0.9rem;
+      background-color: transparent;
+      width: 100%;
+      box-sizing: border-box;
+      padding-inline: 0.5em;
+      padding-block: 0.7em;
+      border: none;
+      border-bottom: var(--border-height) solid var(--border-before-color);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      color: #000;
+    }
+    
+    .input-border {
+      position: absolute;
+      background: var(--border-after-color);
+      height: 2px;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      transform: scaleX(0%);
+      transition: transform 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    }
+    
+    .input:focus {
+      outline: none;
+    }
+    
+    .input:focus + .input-border {
+      transform: scaleX(100%);
+    }
+    
+    .form-control {
+      position: relative;
+      --width-of-input: 300px;
+    }
+    
+    .input-alt {
+      font-size: 1.2rem;
+      padding-inline: 1em;
+      padding-block: 0.8em;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      color: black;
+    }
+    
+    .input-border-alt {
+      height: 3px;
+      background: linear-gradient(90deg, #ff6464 0%, #ffbf59 50%, #47c9ff 100%);
+      transition: transform 0.4s cubic-bezier(0.42, 0, 0.58, 1);
+    }
+    
+    .input-alt:focus + .input-border-alt {
+      transform: scaleX(100%);
+    }
+    
+  
+    form{
+      display: flex;
+      width: 80%;
+    }
+    /* button */
+    /* From Uiverse.io by nikk7007 */ 
+    button {
+      padding: 0.8em 1.8em;
+      border: 2px solid #17C3B2;
+      position: relative;
+      overflow: hidden;
+      background-color: transparent;
+      text-align: center;
+      text-transform: uppercase;
+      font-size: 16px;
+      transition: .3s;
+      z-index: 1;
+      font-family: inherit;
+      color: #17C3B2;
+      cursor: pointer;
+     }
+     
+     button::before {
+      content: '';
+      width: 0;
+      height: 300%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+      background: #17C3B2;
+      transition: .5s ease;
+      display: block;
+      z-index: -1;
+     }
+     
+     button:hover::before {
+      width: 105%;
+     }
+     
+     button:hover {
+      color: #fff;
+     }
+     
+    input{
+      color: #000;
+    }
+  
+  .main-destinos{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+  /* card*/
+  
+.notification {
+    display: flex;
+    flex-direction: column;
+    isolation: isolate;
+    position: relative;
+    width: 18rem;
+    height: 8rem;
+    background: #29292c;
+    border-radius: 1rem;
+    overflow: hidden;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
+    --gradient: linear-gradient(to bottom, #2eadff, #3d83ff, #7e61ff);
+    --color: #32a6ff;
+    margin-top: 10px;
+    cursor: pointer;
+  }
+  
+  .notification:before {
+    position: absolute;
+    content: "";
+    inset: 0.0625rem;
+    border-radius: 0.9375rem;
+    background: #18181b;
+    z-index: 2
+  }
+  
+  .notification:after {
+    position: absolute;
+    content: "";
+    width: 0.25rem;
+    inset: 0.65rem auto 0.65rem 0.5rem;
+    border-radius: 0.125rem;
+    background: var(--gradient);
+    transition: transform 300ms ease;
+    z-index: 4;
+  }
+  
+  .notification:hover:after {
+    transform: translateX(0.15rem)
+  }
+  
+  .notititle {
+    color: var(--color);
+    padding: 0.65rem 0.25rem 0.4rem 1.25rem;
+    font-weight: 500;
+    font-size: 1.1rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+    font-size: 20px;
+  }
+  
+  .notification:hover .notititle {
+    transform: translateX(0.15rem)
+  }
+  
+  .notibody {
+    color: #99999d;
+    padding: 0 1.25rem;
+    transition: transform 300ms ease;
+    z-index: 5;
+  }
+  
+  .notification:hover .notibody {
+    transform: translateX(0.25rem)
+  }
+  
+  .notiglow,
+  .notiborderglow {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(circle closest-side at center, white, transparent);
+    opacity: 0;
+    transition: opacity 300ms ease;
+  }
+  
+  .notiglow {
+    z-index: 3;
+  }
+  
+  .notiborderglow {
+    z-index: 1;
+  }
+  
+  .notification:hover .notiglow {
+    opacity: 0.1
+  }
+  
+  .notification:hover .notiborderglow {
+    opacity: 0.1
+  }
+  
+  .note {
+    color: var(--color);
+    position: fixed;
+    top: 80%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    font-size: 0.9rem;
+    width: 75%;
+  }
+
+/* loader */
+.fulls{
+    background-color: black;
+    width: 100%;
+    height: 1100px;
+    position: absolute;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    opacity: .8;
+    z-index: 2;
+  }
+.lds-ring {
+    /* change color here */
+    color: #fff;
+  }
+  .lds-ring,
+  .lds-ring div {
+    box-sizing: border-box;
+  }
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border: 8px solid currentColor;
+    border-radius: 50%;
+    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: currentColor transparent transparent transparent;
+  }
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.45s;
+  }
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.3s;
+  }
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
