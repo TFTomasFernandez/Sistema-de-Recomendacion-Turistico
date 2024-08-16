@@ -9,14 +9,6 @@ import io
 from datetime import datetime
 
 
-# path = "/home/airflow/gcs/dags/louisiana"
-
-# Usamos glob para obtener todos los archivos JSON en el directorio
-# all_files = glob.glob(f"{path}/*.json")
-
-# df=[]
-# for file in all_files:
-# archivo = pd.read_json(lines=True,encoding="utf-8")
 
 # Creacion de una funcion que lee archivos de airflow y los sube a otro bucket
 
@@ -29,7 +21,7 @@ def upload_df_to_gcs():
         try:
             archivo = pd.read_json(f"/home/airflow/gcs/dags/{state}/{month}.json",encoding="utf-8", lines=True)
             # Convertimos microsegundos fecha y agregamos una columna con el valor
-            archivo["date"] = pd.to_datetime(archivo["time"], unit='ms')
+            archivo["date"] = pd.to_datetime(archivo["time"], unit='ms').astype("date64[pyarrow]")
             archivo.drop(columns=["pics","resp","time","name"],inplace=True)
 
             # Write the DataFrame to the buffer as Parquet
@@ -48,24 +40,3 @@ def upload_df_to_gcs():
 
 
 upload_df_to_gcs()
-
-
-
-
-
-
-    # storage_client = storage.Client(project="cosmic-carving-431013-c0")
-    # bucket = storage_client.bucket(bucket_name)
-    # # destination_bucket = storage_client.bucket(final_bucket_name)
-    # blob = bucket.blob(file_name)
-
-    # # Upload the JSON data to the blob
-    # blob.upload_from_string(buffer.getvalue(), content_type='application/octet-stream')
-
-
-    # Delete all the files
-
-    # blobs = bucket.list_blobs()
-    # for blob in blobs:
-    #     # blob.delete()
-    #     break
