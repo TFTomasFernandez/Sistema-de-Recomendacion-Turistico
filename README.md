@@ -126,7 +126,7 @@ Con esta idea en mente, desarrollamos los siguientes KPIs que nos permitirán me
 
 <div style="display: flex; align-items: center;">
    <h3 style="margin: 0;">Reseñas totales: ↑ 10% respecto al semestre pasado.</h3>
-   <img src="img/kpi1.png" alt="KPI1" style="margin-left: 30px; height: 96px;">
+   <img src="img/KPI1.png" alt="KPI1" style="margin-left: 30px; height: 96px;">
 </div>
 
 ####
@@ -142,7 +142,7 @@ Para estar más seguros de que esto es en efecto causado por el turismo, propone
 
 <div style="display: flex; align-items: center;">
    <h3 style="margin: 0;">Calidad de reseñas: ↑ 0.3 puntos respecto al semestre pasado.</h3>
-   <img src="img/kpi2.png" alt="KPI2" style="margin-left: 30px; height: 96px;">
+   <img src="img/KPI2.png" alt="KPI2" style="margin-left: 30px; height: 96px;">
 </div>
 
 ####
@@ -155,7 +155,7 @@ Para conocer un poco más sobre por qué tenemos tanta confianza, quizás quiera
 
 <div style="display: flex; align-items: center;">
    <h3 style="margin: 0;">Número de negocios totales: ↑ 10% respecto al semestre pasado.</h3>
-   <img src="img/kpi3.png" alt="KPI3" style="margin-left: 30px; height: 96px;">
+   <img src="img/KPI3.png" alt="KPI3" style="margin-left: 30px; height: 96px;">
 </div>
 
 ####
@@ -178,13 +178,17 @@ A continuación haremos un pequeño resumen de las partes individuales que lo co
 
 - **Google Cloud Platform (GCP)**: Es el centro de nuestro ecosistema de almacenamiento y base de datos. Su infraestructura global y segura proporciona escalabilidad, fiabilidad y rendimiento, además de integraciones con otras herramientas y servicios populares. De entre sus productos podemos destacar el uso de ***BigQuery*** y ***Cloud Storage*** para el almacenamiento de la base de datos, ***Composer*** para la automatización de la carga incremental de los datos, ***Vertex AI*** para el entrenamiento y ejecución del modelo de recomendación y ***Looker*** para la visualización de los datos.
 
-- **Python**: Es el principal motor de procesamiento de datos que utilizaremos. Su versatilidad y su sintaxis clara y legible nos permiten un manejo de la información eficiente y un trabajo colaborativo eficaz. Fue usado en la ingesta y procesamiento de los datos y en el entrenamiento del modelo de recomendación, aprovechando muchas de sus librerías, entre las cuales podemos destacar ***pandas*** para el manejo de datos en formato tabular, ***textblob*** para facilitar el análisis de sentimiento del texto procesado, ***pickle*** como formato de almacenamiento para guardar y cargar el modelo entrenado, ***numpy*** para la creación y manipulación de la matriz de datos, crucial en el sistema de recomendación, ***NLTK*** en la lematización, tokenización y manejo de stopwords, mejorando el procesamiento del lenguaje natural, y ***joblib*** para optimizar el almacenamiento y carga eficiente de modelos, especialmente en tareas que requieren paralelización.
+- **Python:** Es el principal motor de procesamiento de datos que utilizaremos. Su versatilidad y su sintaxis clara y legible nos permiten un manejo de la información eficiente y un trabajo colaborativo eficaz. Fue usado en la ingesta y procesamiento de los datos y en el entrenamiento del modelo de recomendación, aprovechando muchas de sus librerías, entre las cuales podemos destacar ***pandas*** para el manejo de datos en formato tabular, ***textblob*** para facilitar el análisis de sentimiento del texto procesado, ***pickle*** como formato de almacenamiento para guardar y cargar el modelo entrenado, ***numpy*** para la creación y manipulación de la matriz de datos, crucial en el sistema de recomendación, ***NLTK*** en la lematización, tokenización y manejo de stopwords, mejorando el procesamiento del lenguaje natural, y ***joblib*** para optimizar el almacenamiento y carga eficiente de modelos, especialmente en tareas que requieren paralelización.
 
-- **GitHub**: La principal plataforma de alojamiento y comunicación de código que utilizaremos, ideal para tener un buen control de versiones y del código fuente a lo largo del grupo y del proyecto. Facilitará mucho el trabajo colaborativo entre los desarrolladores, el seguimiento de problemas y la accesibilidad.
+- **GitHub:** La principal plataforma de alojamiento y comunicación de código que utilizaremos, ideal para tener un buen control de versiones y del código fuente a lo largo del grupo y del proyecto. Facilitará mucho el trabajo colaborativo entre los desarrolladores, el seguimiento de problemas y la accesibilidad.
 
-- **Structured Query Language (SQL)**: Es el lenguaje estándar para la gestión y manipulación de la base de datos relacional. Será utilizado para realizar consultas, actualizar y gestionar los datos almacenados. Su capacidad para manejar grandes volúmenes de datos y realizar operaciones complejas de manera eficiente lo convierte en una herramienta extremadamente útil.
+- **Structured Query Language (SQL):** Es el lenguaje estándar para la gestión y manipulación de la base de datos relacional. Será utilizado para realizar consultas, actualizar y gestionar los datos almacenados. Su capacidad para manejar grandes volúmenes de datos y realizar operaciones complejas de manera eficiente lo convierte en una herramienta extremadamente útil.
 
-- **Google Slides**: Parte de la suite de productividad de Google Workspace, Google Slides permite la creación, edición y colaboración en presentaciones de manera sencilla y accesible desde cualquier dispositivo con acceso a internet. En este proyecto, Google Slides se utiliza constantemente para presentar de manera visual proyectos e ideas. Su capacidad para colaborar en tiempo real facilita la organización y el acceso a la información presentada.
+- **Google Slides:** Parte de la suite de productividad de Google Workspace, Google Slides permite la creación, edición y colaboración en presentaciones de manera sencilla y accesible desde cualquier dispositivo con acceso a internet. En este proyecto, Google Slides se utiliza constantemente para presentar de manera visual proyectos e ideas. Su capacidad para colaborar en tiempo real facilita la organización y el acceso a la información presentada.
+
+- **HTML y CSS:** Son los principales lenguajes de programación para la construcción y visualización de páginas web. Se utilizarán principalmente en la producción de la página web de carga de datos y en la página web donde se aloja el sistema de recomendación.
+
+- **Render:** [Render](https://render.com/) es una página web que, entre otras herramientas, permite hacer un deploy online de manera gratuita. Si bien los recursos son limitados, fueron suficientes para realizar las primeras pruebas del modelo.
 
 <p style="text-align: center;">
    <img src="img/tecnologies_banner.png" alt="Tecnologías utilizadas">
@@ -197,7 +201,7 @@ A continuación haremos un pequeño resumen de las partes individuales que lo co
 3. Una vez termina el proceso de Extracción y Transformación de los datos, estos son cargados a BigQuery, que funciona como centro de distribución de los mismos, dividiéndose en dos direcciones.
 4. - A) Se seleccionan los datos más relevantes para mejorar su visualización en un [Dashboard](#dashboard) interactivo (al que el P.O. tendrá acceso) utilizando Looker, lo que nos permite mantenerlo siempre actualizado con la nueva info y nos dará una perspectiva clara de la situación de negocio, permitiéndonos tomar decisiones informadas.
    - B) Se hace una selección de datos valiosos para el [Sistema de Recomendación](#modelo-de-recomendación) que serán extraídos por Vertex AI para el entrenamiento del Modelo de Machine Learning.
-5. El modelo se prepara y se implementa en una página web de libre acceso, que permitirá a cualquier usuario realizar una consulta. Consideramos los resultados de dicha consulta como información muy valiosa, ya que contiene datos claros sobre las tendencias de búsqueda e interés y se actualiza constantemente, por lo que serán almacenados en una nueva base de datos a la que el P.O. también tendrá acceso.
+5. El modelo se prepara y se implementa en una [página web](https://web-data-forge.onrender.com/) de libre acceso, que permitirá a cualquier usuario realizar una consulta. Consideramos los resultados de dicha consulta como información muy valiosa, ya que contiene datos claros sobre las tendencias de búsqueda e interés y se actualiza constantemente, por lo que serán almacenados en una nueva base de datos a la que el P.O. también tendrá acceso.
 
 <p style="text-align: center;">
    <img src="img/dataflow.png" alt="Ciclo del Dato">
@@ -207,7 +211,7 @@ A continuación haremos un pequeño resumen de las partes individuales que lo co
 
 En resumen, los productos principales a desarrollar son dos:
 
-1. Un [Modelo de Recomendación](#modelo-de-recomendación) que busca identificar lugares con potencial poco explotado de turismo en determinados estados en relación a la región geográfica y recomendarlos a los usuarios, que lo pueden consumir directamente desde la web.
+1. Un [Modelo de Recomendación](#sistema-de-recomendación) que busca identificar lugares con potencial poco explotado de turismo en determinados estados en relación a la región geográfica y recomendarlos a los usuarios, que lo pueden consumir directamente desde la [web](https://web-data-forge.onrender.com/).
 
 2. Un [Dashboard](#dashboard) pulido de la base de datos proporcionada, que tiene la intención de informar y facilitar la visualización y el análisis de posibles puntos de inversión, acompañado de los tres [indicadores](#kpis) principales que permitirán hacer un seguimiento claro del progreso del proyecto.
 
@@ -219,7 +223,7 @@ A continuación observaremos en más detalle cada uno de estos productos:
    <img src="img/sistema-de-reco-pipeline.png" alt="Turismo Emergente">
 </p>
 
-El sistema de recomendación será consumido por el usuario en formato de página web, donde podremos encontrar un cuadro de búsqueda para que el usuario describa su destino ideal. Al ejecutarse, el sistema recomendará la ciudad que mejor se adapte a la descripción y un enlace directo a la búsqueda de la localidad en [Booking](https://booking.com/).
+El sistema de recomendación será consumido por el usuario en formato de página [web](https://web-data-forge.onrender.com/), donde podremos encontrar un cuadro de búsqueda para que el usuario describa su destino ideal. Al ejecutarse, el sistema recomendará la ciudad que mejor se adapte a la descripción y un enlace directo a la búsqueda de la localidad en [Booking](https://booking.com/).
 
 #### Modelos
 
