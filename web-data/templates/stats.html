@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stats</title>
+    <link rel="stylesheet" href="/static/stats.css">
+</head>
+<body>
+    <h1>STATS</h1>
+        <div class="table">
+            <p class="table_title">CIUDADES MÁS RECOMENDADAS</p>
+        {%for city in cities%}
+            <div class="fila">
+                <p>Ciudad: {{city[0]}}</p>
+                <p>Recomendada: {{city[1]}}  veces</p>
+            </div>
+        {%endfor%}
+        
+        </div>
+    
+</body>
+</html>
