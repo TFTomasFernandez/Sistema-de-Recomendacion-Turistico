@@ -126,7 +126,7 @@ Con esta idea en mente, desarrollamos los siguientes KPIs que nos permitirán me
 
 <div style="display: flex; align-items: center;">
    <h3 style="margin: 0;">Reseñas totales: ↑ 10% respecto al semestre pasado.</h3>
-   <img src="img/kpi1.png" alt="KPI1" style="margin-left: 30px; height: 96px;">
+   <img src="img/KPI1.png" alt="KPI1" style="margin-left: 30px; height: 96px;">
 </div>
 
 ####
@@ -142,7 +142,7 @@ Para estar más seguros de que esto es en efecto causado por el turismo, propone
 
 <div style="display: flex; align-items: center;">
    <h3 style="margin: 0;">Calidad de reseñas: ↑ 0.3 puntos respecto al semestre pasado.</h3>
-   <img src="img/kpi2.png" alt="KPI2" style="margin-left: 30px; height: 96px;">
+   <img src="img/KPI2.png" alt="KPI2" style="margin-left: 30px; height: 96px;">
 </div>
 
 ####
@@ -155,7 +155,7 @@ Para conocer un poco más sobre por qué tenemos tanta confianza, quizás quiera
 
 <div style="display: flex; align-items: center;">
    <h3 style="margin: 0;">Número de negocios totales: ↑ 10% respecto al semestre pasado.</h3>
-   <img src="img/kpi3.png" alt="KPI3" style="margin-left: 30px; height: 96px;">
+   <img src="img/KPI3.png" alt="KPI3" style="margin-left: 30px; height: 96px;">
 </div>
 
 ####
