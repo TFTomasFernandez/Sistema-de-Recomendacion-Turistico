@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="/static/admin.css">
+</head>
+<body>
+    <header class="header">
+        <h1> <a href="/"><b> DATA FORGE </b> </a></h1>
+        <nav>
+            <a class="nav_items" href="/destinos">Find your place</a>
+            <!-- <a class="nav_items" href="/contacto">Contacto</a> -->
+            <!-- <a class="nav_items" href="/informacion">Informacion</a> -->
+            <a class="nav_items" href="/admin">Admin</a>
+        </nav>
+    </header>
+    <div class="main_div">
+<div class="form-container">
+	<p class="title">Login</p>
+	<form class="form" method="POST" action="/admin">
+		<div class="input-group">
+			<label for="username">Username</label>
+			<input type="text" required name="email" id="username" placeholder="" value=" ">
+		</div>
+		<div class="input-group">
+			<label for="password">Password</label>
+			<input type="password" required name="password" id="password" placeholder="" value=" ">
+		</div>
+		<button class="sign" type="submit">Sign in</button>
+	</form>
+	
+</div>
+</div>
+</body>
+</html>
