@@ -136,7 +136,7 @@ def upload_business_to_big_query():
                 business_month = pd.read_pickle(f"/home/airflow/gcs/dags/{platform}/business_{month}.pkl")
                 business_month= business_month.iloc[:,0:14]
                 business_month['postal_code'] = pd.to_numeric(business_month['postal_code'], errors='coerce')
-                business_month.drop(columns=["hours","attributes","is_open"],inplace=True)
+                business_month.drop(columns=["hours","attributes","postal_code","is_open"],inplace=True)
                 business_month = business_month.dropna(subset=['postal_code'])
                 business_month["city"] = business_month["city"].replace(city_mapping)
                 business_month = assign_state(business_month, postal_codes)
@@ -145,7 +145,7 @@ def upload_business_to_big_query():
 
             else: 
                 business_month =  pd.read_json(f"/home/airflow/gcs/dags/{platform}/business_{month}.json")
-                business_month.drop(columns=["description","hours","state","price","MISC"],inplace=True)
+                business_month.drop(columns=["description","hours","state","price","MISC","relative_results","url"],inplace=True)
                 business_month = business_month[~business_month["gmap_id"].duplicated()]
         
         
@@ -173,6 +173,8 @@ def upload_reviews_to_big_query():
         month = datetime.now().strftime("%B").lower()
         # Leer archivo reviews
         reviews = pd.read_json(f"/home/airflow/gcs/dags/yelp/{month}.json")
+        reviews.drop(columns=["useful","funny","cool"],inplace=True)
+        reviews["date"] = reviews["date"].astype("date64[pyarrow]")
         buffer = io.BytesIO()
         # Write the DataFrame to the buffer as Parquet
         reviews.to_parquet(buffer, engine='pyarrow')

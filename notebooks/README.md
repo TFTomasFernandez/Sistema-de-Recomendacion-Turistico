@@ -21,13 +21,13 @@ Este proceso de automatizacion lo puedes en encontrar en los siguientes archivos
 
 Luego de este proceso, los datos son redirigidos hacia `Big Query`. Aqui los datos seran utilizados tanto por un sistema de recomendacion utilizando Machine Learning y la presentacion visual de los datos en un *dashboard*.
 
-Una vez tengamos los datos limpios, se les aplico un analisis exploratorio (**EDA**)de los mismos, para detectar tendencias y patrones. El analisis anteriormente mencionado los puedes visualizar haciendo click [aqui](./EDA/eda.ipynb).
+Una vez tengamos los datos limpios, se les aplico un analisis exploratorio (**EDA**) de los mismos, para detectar tendencias y patrones. El analisis anteriormente mencionado los puedes visualizar haciendo click [aqui](./EDA/eda.ipynb).
 
 ## Distribucion del trabajo por archivo
-`ETL/business_yelp.ipynb:` limpieza del archivo que contiene los negocios de Yelp
-`ETL/business_google.ipynb:` limpieza y unificacion de los archivos que contiene los negocios de Google Maps
-`ETL/estados.ipynb:` limpieza y unificacion de los archivos que contiene los estados a analizar (Louisiana e Indiana).
-`ETL/googleMerge.ipynb:` Unificacion de los archivos resultantes de `estados.ipynb` y `business_google.ipynb`
+`ETL/business_yelp.ipynb:` limpieza del archivo que contiene los negocios de Yelp <br>
+`ETL/business_google.ipynb:` limpieza y unificacion de los archivos que contiene los negocios de Google Maps <br>
+`ETL/estados.ipynb:` limpieza y unificacion de los archivos que contiene los estados a analizar (Louisiana e Indiana). <br>
+`ETL/googleMerge.ipynb:` Unificacion de los archivos resultantes de `estados.ipynb` y `business_google.ipynb`. <br>
 `ETL/yelpMerged.ipynb:` Unificacion de los archivos resultantes de `business_yelp.ipynb` y del archivo en crudo *reviews.json* que puedes encontrar en los links al final de este documento
 
 
