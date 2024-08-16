@@ -9,25 +9,7 @@ import time
 app = FastAPI()
 templates = Jinja2Templates(directory="templates")
 app.mount("/static", StaticFiles(directory="static"), name="static")
-# def upload_blob(bucket_name, source_file_name, destination_blob_name,folder):
-#     """Uploads a file to the bucket.
 
-#     Args:
-#         bucket_name (str): The name of the bucket to upload to.
-#         source_file_name (str): The path to the file to upload.
-#         destination_blob_name (str): The name of the blob to create.
-#     """
-
-#     storage_client = storage.Client(project="cosmic-carving-431013-c0")
-#     bucket = storage_client.bucket(bucket_name)
-#     blob = bucket.blob(destination_blob_name)
-
-#     blob.upload_from_filename(source_file_name)
-
-#     print(f"File {source_file_name} uploaded to {destination_blob_name}.")
-
-
-# upload_blob("demo-test-data-forge","../demo.csv","demo.csv")
 
 def upload_file(folder, file: UploadFile = File(...)):
     if(file.size<5000):
@@ -46,7 +28,7 @@ def upload_file(folder, file: UploadFile = File(...)):
 
 
 def upload_file_platform(folder,ext ,file: UploadFile = File(...)):
-    if(file.size<5000):
+    if(file.size<10000):
         raise HTTPException(status_code=500)
     month = datetime.now().strftime("%B").lower()
     bucket_name = "southamerica-west1-data-aut-4fcbc258-bucket"  

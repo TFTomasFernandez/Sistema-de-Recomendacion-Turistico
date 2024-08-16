@@ -1,0 +1,110 @@
+body{
+    background-color: #ffffff;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.header{
+    background-color: black;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-content: center;
+
+}
+nav{
+    display: flex;
+    align-items: center;
+}
+.nav_items{
+    color: #fff;
+    margin: 0 5px;
+    text-decoration: none;
+}
+.nav_items:hover{
+    color: rgb(231, 142, 7);
+}
+
+/* MAIN */
+.main{
+    background-color: rgb(54, 53, 52);
+    display: grid;
+    /* justify-content: space-around; */
+    grid-template-columns: repeat(2,1fr);
+    margin: 10px auto;
+    border-radius: 5px;
+    padding: 5px;
+    width: 95%;
+}
+main h2{
+    text-align: center;
+    font-size: 40px;
+    text-shadow: 2px 0 orange;
+}
+/* contenedor h2 */
+.main_first_div{
+    background-color: black;
+    width: 80%;
+    height: 95%;
+    padding: 4px;
+    margin-top: 2px;
+    border-radius: 10px;
+    margin: auto;
+}
+/* contenedor con la imagen */
+.image{
+    border-radius: 50%;
+}
+img{
+    width: 100%;
+}
+/* FOOTER */
+footer{
+    background-color: #709ca3;
+    padding: 1px;
+    text-align: center;
+}
+
+/* button aqui */
+.main_div_buttons{
+    text-align: center;
+}
+.btn {
+    display: inline-block;
+    padding: 0.9rem 1.8rem;
+    font-size: 16px;
+    font-weight: 700;
+    color: white;
+    border: 3px solid rgb(255, 123, 0);
+    cursor: pointer;
+    position: relative;
+    background-color: transparent;
+    text-decoration: none;
+    overflow: hidden;
+    z-index: 1;
+    font-family: inherit;
+   }
+   
+   .btn::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(252, 167, 70);
+    transform: translateX(-100%);
+    transition: all .3s;
+    z-index: -1;
+   }
+   
+   .btn:hover::before {
+    transform: translateX(0);
+   }
+
+/* DESTINOS */
+
